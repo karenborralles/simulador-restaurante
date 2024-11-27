@@ -13,9 +13,9 @@ public class MainController {
         Mesero meseroEntity = new Mesero();
         Recepcionista recepcionistaEntity = new Recepcionista();
 
-        clienteEntity.crearCliente(30, 40);
-        chefEntity.crearChef(525, 180);
-        meseroEntity.crearMesero(470, 200);
+        clienteEntity.crearCliente(0, 8);
+        chefEntity.crearChef(613, 40);
+        meseroEntity.crearMesero(390, 210);
         recepcionistaEntity.crearRecepcionista(40, 0);
     }
 }

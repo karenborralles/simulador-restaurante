@@ -11,8 +11,8 @@ public class Cliente {
     public void crearCliente(double posX, double posY){
         this.clienteEntity = getGameWorld().spawn("cliente", posX, posY);
         TransformComponent transform = this.clienteEntity.getTransformComponent();
-        transform.setScaleX(0.2);
-        transform.setScaleY(0.2);
+        transform.setScaleX(0.15);
+        transform.setScaleY(0.15);
     }
 
     public Entity getClienteEntity() {

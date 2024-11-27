@@ -11,8 +11,8 @@ public class Mesero {
     public void crearMesero(double posX, double posY){
         this.meseroEntity = getGameWorld().spawn("mesero", posX, posY);
         TransformComponent transform = this.meseroEntity.getTransformComponent();
-        transform.setScaleX(0.2);
-        transform.setScaleY(0.2);
+        transform.setScaleX(0.5);
+        transform.setScaleY(0.5);
     }
 
     public Entity getMeseroEntity() {
