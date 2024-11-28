@@ -2,7 +2,10 @@ package org.example.proyectosimuladork.models;
 
 import org.example.proyectosimuladork.controladores.MainController;
 
+import java.util.HashMap;
+
 public class MeseroModel implements Runnable{
+    
     private final MainController mainController;
     private final RestaurantModel restaurantModel;
 
@@ -36,7 +39,7 @@ public class MeseroModel implements Runnable{
                 System.out.println("Mesero lleva la comida al comensal: " + comida.getOrden());
 
                 Integer[] posicion = restaurantModel.posicionesDeMesas.get(comida.getOrden());
-                mainController.moverMesero(posicion[0]+50, posicion[1]+50, 2);
+                mainController.moverMesero(comida.getOrden(),posicion[0]+50, posicion[1]+50, 2);
                 Thread.sleep(2000);
 
                 restaurantModel.notify();

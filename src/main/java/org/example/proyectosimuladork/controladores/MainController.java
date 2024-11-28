@@ -62,15 +62,17 @@ public class MainController {
         return k-1;
     }
 
-    public void llamarMesero(int id, double x, double y, int tiempo){
+    public void llamarMesero(int idMesa, double x, double y, int tiempo){
+        Integer[] posiciones = meseroEntity.getPosicionesByIdMesa(idMesa);
         System.out.println("Llamando mesero");
-        Platform.runLater(() -> meseroEntity.moverMesero(x, y, tiempo));
-        restaurantModel.bufferOrdenes.add(new OrdenModel(id));
-        moverMeseroACheff(id);
+        Platform.runLater(() -> meseroEntity.moverMesero(posiciones[0], posiciones[1], tiempo));
+        restaurantModel.bufferOrdenes.add(new OrdenModel(idMesa));
+        moverMeseroACheff(idMesa);
     }
 
-    public void moverMesero(double x, double y, int tiempo){
-        Platform.runLater(() -> meseroEntity.moverMesero(x, y, tiempo));
+    public void moverMesero(int idMesa, double x, double y, int tiempo){
+        Integer[] posiciones = meseroEntity.getPosicionesByIdMesa(idMesa);
+        Platform.runLater(() -> meseroEntity.moverMesero(posiciones[0], posiciones[1], tiempo));
     }
 
     public void moverCliente(double x, double y, int tiempo, Cliente cliente){

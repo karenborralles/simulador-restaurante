@@ -27,7 +27,7 @@ public class ClienteModel implements Runnable {
             try {
                 if (!ordenPedida){
                     System.out.println("Llamando mesero");
-                    mainController.llamarMesero(idMesa, posicionX, posicionY, 2);
+                    mainController.llamarMesero(this.idMesa, posicionX, posicionY, 2);
                     ordenPedida = true;
                 }
                 Thread.sleep(10000);

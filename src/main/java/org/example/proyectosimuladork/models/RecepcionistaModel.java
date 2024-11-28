@@ -1,5 +1,6 @@
 package org.example.proyectosimuladork.models;
 
+import javafx.application.Platform;
 import org.example.proyectosimuladork.controladores.MainController;
 import org.example.proyectosimuladork.vistas.Cliente;
 
@@ -48,7 +49,7 @@ public class RecepcionistaModel implements Runnable{
 
             Integer[] posicion = restaurantModel.posicionesDeMesas.get(idMesa);
 
-            mainController.moverCliente(posicion[0], posicion[1], 2, cliente);
+            Platform.runLater(() -> mainController.moverCliente(posicion[0], posicion[1], 2, cliente));
             client.setIdMesa(idMesa);
 
             Thread clientThread = new Thread(client);

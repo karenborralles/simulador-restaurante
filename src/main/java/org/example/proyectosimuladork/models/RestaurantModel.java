@@ -21,11 +21,17 @@ public class RestaurantModel {
     }
 
     public void llenarPosicionesDeMesas(){
+        // mesa izquiera linea 1
         posicionesDeMesas.put(1, new Integer[]{100, -170});
+        // mesa izquierda linea 2
         posicionesDeMesas.put(2, new Integer[]{100, 0});
+        // mesa izquierda linea 3
         posicionesDeMesas.put(3, new Integer[]{100, 150});
+        // mesa derecha linea 1
         posicionesDeMesas.put(4, new Integer[]{330, -170});
+        // mesa derecha linea 2
         posicionesDeMesas.put(5, new Integer[]{330, 0});
+        // mesa derecha linea 3
         posicionesDeMesas.put(6, new Integer[]{330, 150});
 
         disponibilidadMesas.put(1, 0);
