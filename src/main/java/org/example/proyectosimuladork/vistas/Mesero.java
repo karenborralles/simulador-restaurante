@@ -15,6 +15,10 @@ public class Mesero {
         transform.setScaleY(0.5);
     }
 
+    public void moverMesero(double x, double y,  int tiempo){
+        UtilidadesVistas.moverAOtraPosicion(meseroEntity, x, y, tiempo);
+    }
+
     public Entity getMeseroEntity() {
         return meseroEntity;
     }

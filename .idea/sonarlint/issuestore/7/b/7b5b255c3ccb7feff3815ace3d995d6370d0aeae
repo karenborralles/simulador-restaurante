@@ -1,0 +1,10 @@
+
+m	java:S117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÈ‡8ÜÛ‹·2
+I
+java:S1481%"'Remove this unused "id" local variable.(¶Æ×äÿÿÿÿÿ8æÛ‹·2
+{
+java:S21425"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8çÛ‹·2
+G	java:S106*"+Replace this use of System.out by a logger.(ğˆŠó8çÛ‹·2
+L	java:S106G"+Replace this use of System.out by a logger.(¬ß¾ışÿÿÿÿ8éÛ‹·2
+W
+java:S1068"5Remove this unused "posicionesDeMesas" private field.(™¥›°úÿÿÿÿ8êÛ‹·2

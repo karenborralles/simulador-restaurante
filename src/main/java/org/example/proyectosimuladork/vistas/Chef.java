@@ -2,6 +2,7 @@ package org.example.proyectosimuladork.vistas;
 
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.components.TransformComponent;
+import org.example.proyectosimuladork.controladores.MainController;
 
 import static com.almasb.fxgl.dsl.FXGLForKtKt.getGameWorld;
 

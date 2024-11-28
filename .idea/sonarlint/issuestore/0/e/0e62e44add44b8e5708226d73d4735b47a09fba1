@@ -1,0 +1,10 @@
+
+ž
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(“–ýþ8‘ªâ‹·2
+N
+java:S3046"1Don't use "wait()" here; multiple locks are held.(ñÇ‡“8óÉâ‹·2
+L	java:S106"+Replace this use of System.out by a logger.(È½Ì¶ùÿÿÿÿ8•ªâ‹·2
+M
+java:S2446!"0"notify" may not wake up the appropriate thread.(–¥·¤8¹ïî‹·2
+O
+java:S1068"2Remove this unused "mainController" private field.(Šÿã…8•ªâ‹·2
