@@ -16,7 +16,6 @@ public class MainController {
     private Chef chefEntity = new Chef();
     private Mesero meseroEntity = new Mesero();
     private Recepcionista recepcionistaEntity = new Recepcionista();
-    private HashMap<Integer, Integer[]> posicionesDeMesas = new HashMap<>();
     private final RestaurantModel restaurantModel = new RestaurantModel();
 
     public void iniciar(){
@@ -25,8 +24,8 @@ public class MainController {
         recepcionistaEntity.crearRecepcionista(40, 0);
 
         //hilos
-        Thread chefThread = new Thread(new ChefModel(this));
-        Thread meseroThread = new Thread(new MeseroModel(this));
+        Thread chefThread = new Thread(new ChefModel(this, restaurantModel));
+        Thread meseroThread = new Thread(new MeseroModel(this, restaurantModel));
         Thread recepcionistaThread = new Thread(new RecepcionistaModel(this, restaurantModel));
 
         chefThread.start();
@@ -66,8 +65,25 @@ public class MainController {
         return k-1;
     }
 
-    public void llamarMesero(double x, double y, int tiempo){
+    public void llamarMesero(int id, double x, double y, int tiempo){
         System.out.println("Llamando mesero");
+        Platform.runLater(() -> meseroEntity.moverMesero(x, y, tiempo));
+        restaurantModel.bufferOrdenes.add(new OrdenModel(id));
+        moverMeseroACheff(id);
+    }
+
+    public void moverMesero(int id, double x, double y, int tiempo){
         meseroEntity.moverMesero(x, y, tiempo);
     }
+
+    public void moverMeseroACheff(int id){
+        Platform.runLater(() -> meseroEntity.moverMesero(613, 40, 2));
+    }
+
+    public void desaparecerCliente(ClienteModel clienteModel){
+        restaurantModel.colaEspera.get(clienteModel);
+        //borrarlo
+    }
+
+
 }

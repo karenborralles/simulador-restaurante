@@ -7,11 +7,40 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class RestaurantModel {
-    private int capacidad;
     public Queue<OrdenModel> bufferOrdenes = new LinkedList<>();
+    public Queue<ComidaModel> bufferComidas = new LinkedList<>();
     public HashMap<ClienteModel, Cliente> colaEspera = new HashMap<>();
     public int mesasOcupadas = 0;
+    public HashMap<Integer, Integer[]> posicionesDeMesas = new HashMap<>();
+    public HashMap<Integer, Integer> disponibilidadMesas = new HashMap<>();
+
 
     public RestaurantModel() {
+        llenarPosicionesDeMesas();
+    }
+
+    public void llenarPosicionesDeMesas(){
+        posicionesDeMesas.put(1, new Integer[]{});
+        posicionesDeMesas.put(2, new Integer[]{});
+        posicionesDeMesas.put(3, new Integer[]{});
+        posicionesDeMesas.put(4, new Integer[]{});
+        posicionesDeMesas.put(5, new Integer[]{});
+        posicionesDeMesas.put(6, new Integer[]{});
+
+        disponibilidadMesas.put(1, 0);
+        disponibilidadMesas.put(2, 0);
+        disponibilidadMesas.put(3, 0);
+        disponibilidadMesas.put(4, 0);
+        disponibilidadMesas.put(5, 0);
+        disponibilidadMesas.put(6, 0);
+    }
+
+    public int buscarMesaLibre(){
+        for (HashMap.Entry<Integer, Integer> entry : disponibilidadMesas.entrySet()) {
+            if (entry.getValue() == 0) {
+                return entry.getKey();
+            }
+        }
+        return -1;
     }
 }

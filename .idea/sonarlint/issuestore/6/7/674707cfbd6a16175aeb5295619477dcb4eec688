@@ -1,14 +1,22 @@
 
 „
-java:S1319"gThe type of "colaEspera" should be an interface such as "Map" rather than the implementation "HashMap".(È˜Øğ8—à‹·2
+java:S1319"gThe type of "colaEspera" should be an interface such as "Map" rather than the implementation "HashMap".(È˜Øğ8ò‰‰·2
+‹
+java:S1319"nThe type of "posicionesDeMesas" should be an interface such as "Map" rather than the implementation "HashMap".(áÇÙõ8ò‰‰·2
+’
+java:S1319"pThe type of "disponibilidadMesas" should be an interface such as "Map" rather than the implementation "HashMap".(†½Æåûÿÿÿÿ8ó‰‰·2
 {
-java:S1104"YMake bufferOrdenes a static final constant or non-public and provide accessors if needed.(Ü›¼ûüÿÿÿÿ8—à‹·2
-s
-java:S1104"VMake colaEspera a static final constant or non-public and provide accessors if needed.(È˜Øğ8—à‹·2
+java:S1104
+"YMake bufferOrdenes a static final constant or non-public and provide accessors if needed.(Ü›¼ûüÿÿÿÿ8ó‰‰·2
 v
-java:S1104"YMake mesasOcupadas a static final constant or non-public and provide accessors if needed.(ÀÀÏ–8—à‹·2
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(²Éÿ¬ùÿÿÿÿ8—à‹·2
-J
-java:S1068
-"-Remove this unused "capacidad" private field.(ÚÁ‘ä8’—à‹·2
+java:S1104"YMake bufferComidas a static final constant or non-public and provide accessors if needed.(ÈÜ»™8Œ¤«·2
+s
+java:S1104"VMake colaEspera a static final constant or non-public and provide accessors if needed.(È˜Øğ8ó‰‰·2
+v
+java:S1104"YMake mesasOcupadas a static final constant or non-public and provide accessors if needed.(ÀÀÏ–8ó‰‰·2
+z
+java:S1104"]Make posicionesDeMesas a static final constant or non-public and provide accessors if needed.(áÇÙõ8ó‰‰·2
+
+java:S1104"_Make disponibilidadMesas a static final constant or non-public and provide accessors if needed.(†½Æåûÿÿÿÿ8ó‰‰·2
+U
+java:S3252'"3Use static access with "java.util.Map" for "Entry".(Œšüóûÿÿÿÿ8ò¿‘·2

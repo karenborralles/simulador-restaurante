@@ -25,3 +25,5 @@ o
 ?src/main/java/org/example/proyectosimuladork/vistas/Mesero.java,9/9/9908b874b115ea4b5a3bf84701076c5e54fa736e
 y
 Isrc/main/java/org/example/proyectosimuladork/vistas/UtilidadesVistas.java,3/a/3aa41674fcc36ead41213f5df6a9f1f4c29cecf5
+t
+Dsrc/main/java/org/example/proyectosimuladork/models/ComidaModel.java,e/c/ecd36656f68d0ed82e240566b269d29bab1d81ab

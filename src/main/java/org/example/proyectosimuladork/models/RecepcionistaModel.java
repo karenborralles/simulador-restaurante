@@ -40,9 +40,12 @@ public class RecepcionistaModel implements Runnable{
             System.out.println("Cliente entrando: " + firstEntry.getKey());
             restaurantModel.colaEspera.remove(firstEntry.getKey());
 
-            //buscar mesa libre
-            //Comenzal entra a la mesa libre
+            int idMesa = restaurantModel.buscarMesaLibre();
+            restaurantModel.disponibilidadMesas.put(idMesa, 1);
+
             ClienteModel client = firstEntry.getKey();
+            //Comenzal entra a la mesa libre
+            client.setIdMesa(idMesa);
 
             Thread clientThread = new Thread(client);
             clientThread.start();
