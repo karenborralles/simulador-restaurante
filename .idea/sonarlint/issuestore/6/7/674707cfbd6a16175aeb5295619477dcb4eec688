@@ -19,4 +19,4 @@ java:S1104"]Make posicionesDeMesas a static final constant or non-public and p
 
 java:S1104"_Make disponibilidadMesas a static final constant or non-public and provide accessors if needed.(†½Ζεϋÿÿÿÿ8σ‰‰·2
 U
-java:S3252'"3Use static access with "java.util.Map" for "Entry".(όσϋÿÿÿÿ8ςΏ‘·2
+java:S3252("3Use static access with "java.util.Map" for "Entry".(όσϋÿÿÿÿ8ςΏ‘·2

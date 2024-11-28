@@ -17,4 +17,8 @@ public class UtilidadesVistas {
                 .to(nuevaPosicion)
                 .buildAndPlay();
     }
+
+    public static void deleteEntity(Entity entity){
+        entity.removeFromWorld();
+    }
 }

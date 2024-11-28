@@ -15,17 +15,18 @@ public class RestaurantModel {
     public HashMap<Integer, Integer> disponibilidadMesas = new HashMap<>();
 
 
+
     public RestaurantModel() {
         llenarPosicionesDeMesas();
     }
 
     public void llenarPosicionesDeMesas(){
-        posicionesDeMesas.put(1, new Integer[]{});
-        posicionesDeMesas.put(2, new Integer[]{});
-        posicionesDeMesas.put(3, new Integer[]{});
-        posicionesDeMesas.put(4, new Integer[]{});
-        posicionesDeMesas.put(5, new Integer[]{});
-        posicionesDeMesas.put(6, new Integer[]{});
+        posicionesDeMesas.put(1, new Integer[]{100, 10});
+        posicionesDeMesas.put(2, new Integer[]{100, 0});
+        posicionesDeMesas.put(3, new Integer[]{100, 150});
+        posicionesDeMesas.put(4, new Integer[]{330, 10});
+        posicionesDeMesas.put(5, new Integer[]{330, 0});
+        posicionesDeMesas.put(6, new Integer[]{330, 150});
 
         disponibilidadMesas.put(1, 0);
         disponibilidadMesas.put(2, 0);

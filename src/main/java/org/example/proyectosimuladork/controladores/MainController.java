@@ -2,10 +2,7 @@ package org.example.proyectosimuladork.controladores;
 
 import javafx.application.Platform;
 import org.example.proyectosimuladork.models.*;
-import org.example.proyectosimuladork.vistas.Chef;
-import org.example.proyectosimuladork.vistas.Cliente;
-import org.example.proyectosimuladork.vistas.Mesero;
-import org.example.proyectosimuladork.vistas.Recepcionista;
+import org.example.proyectosimuladork.vistas.*;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -37,14 +34,14 @@ public class MainController {
         new Thread(() -> {
             try {
                 while (true) {
-                    System.out.println("Nuevo CLiente");
-
                     ClienteModel clienteModel = new ClienteModel(this, 0, 8, restaurantModel);
                     Cliente cliente = new Cliente();
+
+                    clienteModel.setCliente(cliente);
+
                     restaurantModel.colaEspera.put(clienteModel, cliente);
 
                     Platform.runLater(() -> cliente.crearCliente(clienteModel.getPosicionX(), clienteModel.getPosicionY()));
-                    System.out.println(restaurantModel.colaEspera.isEmpty());
                     int poissonRes = generarNumConPoisson(1);
                     Thread.sleep(poissonRes * 1000L);
                 }
@@ -72,18 +69,19 @@ public class MainController {
         moverMeseroACheff(id);
     }
 
-    public void moverMesero(int id, double x, double y, int tiempo){
+    public void moverMesero(double x, double y, int tiempo){
         meseroEntity.moverMesero(x, y, tiempo);
+    }
+
+    public void moverCliente(double x, double y, int tiempo, Cliente cliente){
+        cliente.moverCliente(x, y, tiempo);
     }
 
     public void moverMeseroACheff(int id){
         Platform.runLater(() -> meseroEntity.moverMesero(613, 40, 2));
     }
 
-    public void desaparecerCliente(ClienteModel clienteModel){
-        restaurantModel.colaEspera.get(clienteModel);
-        //borrarlo
+    public void desaparecerCliente(Cliente cliente){
+        Platform.runLater(() -> UtilidadesVistas.deleteEntity(cliente.getClienteEntity()));
     }
-
-
 }

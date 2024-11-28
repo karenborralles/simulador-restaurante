@@ -15,8 +15,6 @@ x
 Hsrc/main/java/org/example/proyectosimuladork/models/RestaurantModel.java,6/7/674707cfbd6a16175aeb5295619477dcb4eec688
 p
 @src/main/java/org/example/proyectosimuladork/vistas/Cliente.java,0/d/0d606ac13acc3901154d34f7394311ba4a1c5f73
-Å
-Qsrc/main/java/org/example/proyectosimuladork/controladores/ClienteController.java,2/1/210f9cad269eb9e1ad5b1e8b97b65a97ce22c660
 {
 Ksrc/main/java/org/example/proyectosimuladork/models/RecepcionistaModel.java,0/e/0e62e44add44b8e5708226d73d4735b47a09fba1
 t

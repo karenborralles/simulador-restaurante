@@ -44,7 +44,11 @@ public class RecepcionistaModel implements Runnable{
             restaurantModel.disponibilidadMesas.put(idMesa, 1);
 
             ClienteModel client = firstEntry.getKey();
-            //Comenzal entra a la mesa libre
+            Cliente cliente = firstEntry.getValue();
+
+            Integer[] posicion = restaurantModel.posicionesDeMesas.get(idMesa);
+
+            mainController.moverCliente(posicion[0], posicion[1], 2, cliente);
             client.setIdMesa(idMesa);
 
             Thread clientThread = new Thread(client);

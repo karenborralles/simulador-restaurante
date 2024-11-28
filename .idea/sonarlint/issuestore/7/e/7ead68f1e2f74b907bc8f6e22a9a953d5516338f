@@ -9,8 +9,8 @@ java:S3046"1Don't use "wait()" here; multiple locks are held.(ñÇ‡“8«”½·2
 java:S2276!"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(¯ú™ú8«”½·2
 L	java:S106$"+Replace this use of System.out by a logger.(Ïş¸üüÿÿÿÿ8¬”½·2
 `
-java:S2276&"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(¯ú™ú8¬”½·2
+java:S2276'"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(¯ú™ú8¬”½·2
 M
-java:S2446("0"notify" may not wake up the appropriate thread.(–¥·¤8­”½·2
+java:S2446)"0"notify" may not wake up the appropriate thread.(–¥·¤8­”½·2
 O
 java:S1068"2Remove this unused "mainController" private field.(Šÿã…8­”½·2

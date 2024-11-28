@@ -2,17 +2,17 @@ package org.example.proyectosimuladork.models;
 
 import javafx.application.Platform;
 import org.example.proyectosimuladork.controladores.MainController;
+import org.example.proyectosimuladork.vistas.Cliente;
 
 public class ClienteModel implements Runnable {
     private MainController mainController;
-    private RecepcionistaModel recepcionistaModel;
     private double posicionX;
     private double posicionY;
     private boolean flag = true;
     private final RestaurantModel restaurantModel;
     private int idMesa;
-    private boolean ordenServida;
     private boolean ordenPedida;
+    private Cliente cliente;
 
     public ClienteModel(MainController mainController, double posicionX, double posicionY, RestaurantModel restaurantModel) {
         this.mainController = mainController;
@@ -26,21 +26,20 @@ public class ClienteModel implements Runnable {
         while (flag) {
             try {
                 if (!ordenPedida){
+                    System.out.println("Llamando mesero");
                     mainController.llamarMesero(idMesa, posicionX, posicionY, 2);
                     ordenPedida = true;
                 }
-                if (ordenServida) {
-                    mainController.moverMeseroACheff(idMesa);
-                    System.out.println("CLiente comiendo");
-                    Thread.sleep(2000);
-                    System.out.println("Cliente dejando restaurant");
+                Thread.sleep(10000);
+                System.out.println("CLiente comiendo");
+                Thread.sleep(2000);
+                System.out.println("Cliente dejando restaurant");
 
-                    restaurantModel.mesasOcupadas--;
-                    restaurantModel.disponibilidadMesas.put(idMesa, 0);
-                    //desaparecer el entity
+                restaurantModel.mesasOcupadas--;
+                restaurantModel.disponibilidadMesas.put(idMesa, 0);
+                mainController.desaparecerCliente(cliente);
 
-                    flag = false;
-                }
+                flag = false;
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -59,7 +58,7 @@ public class ClienteModel implements Runnable {
         this.idMesa = idMesa;
     }
 
-    public void setOrdenServida(boolean ordenServida) {
-        this.ordenServida = ordenServida;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }

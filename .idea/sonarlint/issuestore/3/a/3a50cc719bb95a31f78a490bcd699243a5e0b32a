@@ -1,8 +1,7 @@
 
-g	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8÷µ·2
+g	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8„¾û·2
 {
-java:S2142,"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8•÷µ·2
-G	java:S106""+Replace this use of System.out by a logger.(áºªÛ8–÷µ·2
-G	java:S106$"+Replace this use of System.out by a logger.(š·É8–÷µ·2
-S
-java:S1068"6Remove this unused "recepcionistaModel" private field.(×Ùóœ8˜÷µ·2
+java:S2142+"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8‰¾û·2
+L	java:S106"+Replace this use of System.out by a logger.(¬ß¾ışÿÿÿÿ8Š¾û·2
+G	java:S106""+Replace this use of System.out by a logger.(áºªÛ8Š¾û·2
+G	java:S106$"+Replace this use of System.out by a logger.(š·É8Š¾û·2

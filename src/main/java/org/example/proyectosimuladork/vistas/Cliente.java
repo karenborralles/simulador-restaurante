@@ -15,6 +15,10 @@ public class Cliente {
         transform.setScaleY(0.15);
     }
 
+    public void moverCliente(double x, double y,  int tiempo){
+        UtilidadesVistas.moverAOtraPosicion(clienteEntity, x, y, tiempo);
+    }
+
     public Entity getClienteEntity() {
         return clienteEntity;
     }
