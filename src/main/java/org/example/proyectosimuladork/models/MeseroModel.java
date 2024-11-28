@@ -35,7 +35,8 @@ public class MeseroModel implements Runnable{
                 ComidaModel comida = restaurantModel.bufferComidas.poll();
                 System.out.println("Mesero lleva la comida al comensal: " + comida.getOrden());
 
-                //Mover al mesero a la mesa
+                Integer[] posicion = restaurantModel.posicionesDeMesas.get(comida.getOrden());
+                mainController.moverMesero(posicion[0]+50, posicion[1]+50, 2);
                 Thread.sleep(2000);
 
                 restaurantModel.notify();

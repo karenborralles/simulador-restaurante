@@ -3,9 +3,9 @@ D
 java:S2189""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8³ä©·2
 {
 java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8¶ä©·2
-L	java:S106"+Replace this use of System.out by a logger.(æîç­şÿÿÿÿ8·ä©·2
+L	java:S106"+Replace this use of System.out by a logger.(æîç­şÿÿÿÿ8·ä©·2
 N
 java:S3046$"1Don't use "wait()" here; multiple locks are held.(ñÇ‡“8¸ä©·2
 L	java:S106#"+Replace this use of System.out by a logger.(È½Ì¶ùÿÿÿÿ8¸ä©·2
 F	java:S106("+Replace this use of System.out by a logger.(ÆÇ‹p8¹ä©·2
-L	java:S106<"+Replace this use of System.out by a logger.(ò®ç£üÿÿÿÿ8»ä©·2
+L	java:S106<"+Replace this use of System.out by a logger.(ò®ç£üÿÿÿÿ8Ç´·‘·2

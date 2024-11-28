@@ -70,7 +70,7 @@ public class MainController {
     }
 
     public void moverMesero(double x, double y, int tiempo){
-        meseroEntity.moverMesero(x, y, tiempo);
+        Platform.runLater(() -> meseroEntity.moverMesero(x, y, tiempo));
     }
 
     public void moverCliente(double x, double y, int tiempo, Cliente cliente){
