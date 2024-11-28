@@ -17,13 +17,12 @@ public class MainController {
     private Mesero meseroEntity = new Mesero();
     private Recepcionista recepcionistaEntity = new Recepcionista();
     private HashMap<Integer, Integer[]> posicionesDeMesas = new HashMap<>();
+    private final RestaurantModel restaurantModel = new RestaurantModel();
 
     public void iniciar(){
         chefEntity.crearChef(613, 40);
         meseroEntity.crearMesero(390, 210);
         recepcionistaEntity.crearRecepcionista(40, 0);
-
-        RestaurantModel restaurantModel = new RestaurantModel();
 
         //hilos
         Thread chefThread = new Thread(new ChefModel(this));
@@ -41,13 +40,13 @@ public class MainController {
                 while (true) {
                     System.out.println("Nuevo CLiente");
 
-                    ClienteModel clienteModel = new ClienteModel(this, 0, 8);
+                    ClienteModel clienteModel = new ClienteModel(this, 0, 8, restaurantModel);
                     Cliente cliente = new Cliente();
                     restaurantModel.colaEspera.put(clienteModel, cliente);
 
                     Platform.runLater(() -> cliente.crearCliente(clienteModel.getPosicionX(), clienteModel.getPosicionY()));
-
-                    int poissonRes = generarNumConPoisson(5);
+                    System.out.println(restaurantModel.colaEspera.isEmpty());
+                    int poissonRes = generarNumConPoisson(1);
                     Thread.sleep(poissonRes * 1000L);
                 }
             } catch (InterruptedException e) {

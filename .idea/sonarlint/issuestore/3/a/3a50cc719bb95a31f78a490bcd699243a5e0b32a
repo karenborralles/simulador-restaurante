@@ -1,5 +1,13 @@
 
-D
-java:S2189""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8Í¸‹·2
+g	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8â€›·2
+{
+java:S2142!"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8ë€›·2
+]	java:S125"<This block of commented-out lines of code should be removed.(ğşÜùÿÿÿÿ8ë€›·2
+G	java:S106"+Replace this use of System.out by a logger.(áºªÛ8“Ğ·2
+G	java:S106"+Replace this use of System.out by a logger.(š·É8¢‰·2
+Z
+java:S1128"8Remove this unused import 'javafx.application.Platform'.(§“óùÿÿÿÿ8ƒ´¢·2
+T
+java:S1068"2Remove this unused "mainController" private field.(µ¾õêıÿÿÿÿ8í€›·2
 S
-java:S1068"6Remove this unused "recepcionistaModel" private field.(×Ùóœ8Ñ¸‹·2
+java:S1068"6Remove this unused "recepcionistaModel" private field.(×Ùóœ8í€›·2

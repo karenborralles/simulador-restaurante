@@ -8,18 +8,31 @@ public class ClienteModel implements Runnable {
     private RecepcionistaModel recepcionistaModel;
     private double posicionX;
     private double posicionY;
+    private boolean flag = true;
+    private final RestaurantModel restaurantModel;
 
-
-    public ClienteModel(MainController mainController, double posicionX, double posicionY) {
+    public ClienteModel(MainController mainController, double posicionX, double posicionY, RestaurantModel restaurantModel) {
         this.mainController = mainController;
         this.posicionX = posicionX;
         this.posicionY = posicionY;
+        this.restaurantModel = restaurantModel;
     }
 
     @Override
     public void run() {
-        while (true) {
-            Platform.runLater(() -> mainController.llamarMesero(posicionX, posicionY, 4));
+        while (flag) {
+            //Platform.runLater(() -> mainController.llamarMesero(posicionX, posicionY, 4));
+            try {
+                System.out.println("CLiente comiendo");
+                Thread.sleep(4000);
+                System.out.println("Cliente dejando restaurant");
+
+                restaurantModel.mesasOcupadas--;
+
+                flag = false;
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
